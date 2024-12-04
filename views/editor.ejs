@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Extracted Data</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <!-- Page Title -->
+    <div class="text-center mb-4">
+      <h1 class="display-5">Edit Extracted Data</h1>
+      <p class="text-muted">Modify the data below and convert it to Excel format easily.</p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <form action="/convert-to-excel" method="POST">
+          <div class="mb-3">
+            <label for="jsonData" class="form-label">Edit JSON Data</label>
+            <textarea 
+              id="jsonData" 
+              name="jsonData" 
+              class="form-control" 
+              rows="10" 
+              placeholder="Paste your JSON data here..."><%= data %></textarea>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <button type="submit" class="btn btn-primary">
+              <i class="bi bi-file-earmark-spreadsheet"></i> Convert to Excel
+            </button>
+            <a href="/" class="btn btn-link">Go Back</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">© 2024 Reserved by <a href="https://apitos.in" class="text-white text-decoration-underline">Apitos</a></p>
+  </footer>
+
+  <!-- Bootstrap Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+</body>
+</html>
